@@ -36,7 +36,7 @@ const ProjectList = () => (
       <Project
         name="Food-zone"
         description="Feast Your Eyes (Before Your Stomach Does): We're talking stunning UI, so smooth and delicious you'll want to take a bite (don't worry, the virtual calories don't count!)."
-        link="/"
+        link="https://github.com/Sneekyboots/food-zone.git"
         img={{ src: '/assets/images/project-fire.png', alt: 'Project Fire' }}
         category={
           <>
@@ -50,7 +50,7 @@ const ProjectList = () => (
       <Project
         name="Ar projects"
         description="Unleash a jet turbine in your room! My ARCore projects bring AR magic to life: a virtual garden, furniture try-on, and a battling (or friendly) dragon!"
-        link="/"
+        link="https://github.com/Sneekyboots/garden-ai.git"
         img={{ src: '/assets/images/project-maps.png', alt: 'Project Maps' }}
         category={
           <>
