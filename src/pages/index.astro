@@ -2,10 +2,12 @@
 import type { IFrontmatter } from 'astro-boilerplate-components';
 
 import { CTA } from '@/partials/CTA';
+import { Education } from '@/partials/Education';
+import { Experience } from '@/partials/Experience';
 import { Hero } from '@/partials/Hero';
 import { ProjectList } from '@/partials/ProjectList';
 import { RecentPosts } from '@/partials/RecentPosts';
-
+import { Skills } from '@/partials/Skills';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 import { sortByDate } from '@/utils/Posts';
@@ -19,8 +21,13 @@ const { description } = AppConfig;
 ---
 
 <Base head={{ title, description }}>
-  <Hero />
-  <ProjectList />
-  <RecentPosts postList={lastThreePosts} />
-  <CTA />
+  <div class='minecraft-world'>
+    <Hero />
+    <Education />
+    <Skills />
+    <Experience />
+    <ProjectList />
+    <RecentPosts postList={lastThreePosts} />
+    <CTA />
+  </div>
 </Base>

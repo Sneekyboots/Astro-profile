@@ -1,5 +1,7 @@
 ---
-import { Footer } from '@/partials/Footer';
+// Import Minecraft CSS
+import '../styles/minecraft.css';
+
 import { Navbar } from '@/partials/Navbar';
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -25,10 +27,46 @@ const {
 
     <link rel='alternate' type='application/rss+xml' href='/rss.xml' />
     <link rel='icon' type='image/x-icon' href='/favicon.ico' />
-  </head>
-  <body class='bg-slate-900 text-gray-100'>
-    <Navbar />
+    <!-- Minecraft font -->
+    <link
+      href='https://fonts.googleapis.com/css2?family=VT323&display=swap'
+      rel='stylesheet'
+    />
 
-    <slot></slot>
+    <style>
+      /* Add Minecraft-like background */
+      body {
+        background-image: url('/assets/images/minecraft-bg.png');
+        background-repeat: repeat;
+        image-rendering: pixelated;
+        overflow-x: hidden;
+        perspective: 1000px;
+      }
+
+      /* Create a 3D world effect with parallax */
+      .minecraft-world {
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+      }
+
+      /* Vignette effect like Minecraft */
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.8);
+        pointer-events: none;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body class='minecraft-font bg-slate-900 text-gray-100'>
+    <div class='minecraft-world'>
+      <Navbar />
+      <slot></slot>
+    </div>
   </body>
 </html>
