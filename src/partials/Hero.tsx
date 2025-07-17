@@ -41,11 +41,7 @@ const Hero = () => (
               {/* Contact Info */}
               <div className="mb-4 grid grid-cols-1 gap-2 md:grid-cols-2">
                 <div className="flex items-center">
-                  <span className="mr-2 text-green-500">📱</span>
-                  <span className="text-sm">+91 8197867200</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="mr-2 text-green-500">📧</span>
+                  <span className="mr-2 text-green-500"></span>
                   <span className="text-sm">sneekyboots122@gmail.com</span>
                 </div>
                 <div className="flex items-center">
